@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, Fraunces;
+    font-size: 14px;
+    font-weight: 500;
+}
+*::before, *::after{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10rem auto;
+    background-color: hsl(30, 38%, 92%);
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+.image{
+    width: clamp(15rem, 25rem, 40rem);
+    border-radius: 5px;
+    background-image: url(images/image-product-mobile.jpg);
+    background-size: cover;
+    height: 30rem;
+}
+.details{
+    padding: 2rem;
+    color: hsl(228, 12%, 48%);
+    background-color: white;
+    width: clamp(10rem, 25rem, 35rem);
+    border-radius: 0 0 10px 10px;
+    margin-top: -2rem;
+}
+.perfume{
+    margin: 0.5rem 0 2rem 0;
+    font-family: Fraunces;
+}
+.french{
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: hsl(212, 21%, 14%);
+    font-family: Fraunces;
+}
+.price-tag{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-family: Fraunces;
+}
+.actual-price{
+    color: hsl(158, 36%, 37%);
+    font-size: 2rem;
+    font-weight: 700;
+}
+.before-price{
+    text-decoration: line-through;
+    padding: 2rem 0;
+}
+button{
+    background-color: hsl(158, 36%, 37%);
+    padding: 1rem 0;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+}
+button:hover{
+    background-color: hsl(158, 42%, 18%);
+}
+.cart{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+@media(min-width: 1024px){
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .image{
+        background-image: url(images/image-product-desktop.jpg);
+        background-size: cover;
+        border-radius: 5px 0 0 5px;
+    }
+    .details{
+        height: 30rem;
+        margin-top: 0;
+        border-radius: 0 5px 5px 0;
+    }
+    .french{
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+    .attribution{
+        width: 100%;
+    }
+}
